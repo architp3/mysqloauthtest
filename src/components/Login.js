@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center'
   },
-  inputBox: {
+  input: {
     paddingLeft:15,
     paddingBottom:10,
     paddingTop:10,
