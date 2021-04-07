@@ -1,36 +1,30 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 function Login() {
-		return(
-			<View style={styles.container}>
-                <TextInput style={styles.inputBox}
-                    placeholder="Email Address"
-                    placeholderTextColor = "grey"
-                    selectionColor="grey"
-                    />
-                <TextInput style={styles.inputBox} secureTextEntry={true}
-                    placeholder="Password"
-                    placeholderTextColor = "grey"
-                    />
-                <TouchableOpacity style={styles.button} >
-                    <Text style={styles.buttonText}>SIGN IN</Text>
+    return(
+        <View style={styles.container}>
+            <TextInput style={styles.inputBox}
+                placeholder="Email Address"
+                placeholderTextColor = "grey"
+                selectionColor="grey"
+                />
+            <TextInput style={styles.inputBox} secureTextEntry={true}
+                placeholder="Password"
+                placeholderTextColor = "grey"
+                />
+            <TouchableOpacity style={styles.button} >
+                <Text style={styles.buttonText}>SIGN IN</Text>
+            </TouchableOpacity>
+            <View style={styles.hyperLinkText}>
+                <Text >Haven't Registered Yet?</Text>
+                <TouchableOpacity >
+                    <Text style={styles.hyperLink}>SIGN UP</Text>
                 </TouchableOpacity>
-                <View style={styles.hyperLinkText}>
-                    <Text >Haven't Registered Yet?</Text>
-                    <TouchableOpacity >
-                        <Text style={styles.hyperLink}>SIGN UP</Text>
-                    </TouchableOpacity>
-                </View>
-  		</View>
-			)
-	}
+            </View>
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
   container : {
@@ -38,7 +32,6 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center'
   },
-
   inputBox: {
     paddingLeft:15,
     paddingBottom:10,
@@ -73,7 +66,6 @@ const styles = StyleSheet.create({
       color: '#a40b0e',
       fontWeight: 'bold',
   }
-
 });
 
 export default Login;
