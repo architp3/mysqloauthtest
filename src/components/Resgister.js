@@ -28,15 +28,6 @@ function Register() {
     );
 }
 const styles = StyleSheet.create({
-    registerContainer: {
-      backgroundColor:"orange",
-      width:"100%",
-      height:"100%",
-    },
-    registerContentsContainer:{
-        alignItems:'center',
-        justifyContent:'center',
-    },
     card:{
         height:650,
         width:450,
