@@ -1,15 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity
+} from 'react-native';
 
 function Login() {
     return(
         <View style={styles.container}>
-            <TextInput style={styles.inputBox}
+            <TextInput style={styles.input}
                 placeholder="Email Address"
                 placeholderTextColor = "grey"
                 selectionColor="grey"
                 />
-            <TextInput style={styles.inputBox} secureTextEntry={true}
+            <TextInput style={styles.input} secureTextEntry={true}
                 placeholder="Password"
                 placeholderTextColor = "grey"
                 />
@@ -23,7 +29,7 @@ function Login() {
                 </TouchableOpacity>
             </View>
         </View>
-    );
+    )
 }
 
 const styles = StyleSheet.create({
@@ -32,6 +38,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center'
   },
+
   input: {
     paddingLeft:15,
     paddingBottom:10,
@@ -66,6 +73,7 @@ const styles = StyleSheet.create({
       color: '#a40b0e',
       fontWeight: 'bold',
   }
+
 });
 
 export default Login;
