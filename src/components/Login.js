@@ -4,10 +4,11 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Button
 } from 'react-native';
 
-function Login() {
+function Login({ navigation }) {
     return(
         <View style={styles.container}>
             <TextInput style={styles.input}
@@ -25,7 +26,7 @@ function Login() {
             <View style={styles.hyperLinkText}>
                 <Text >Haven't Registered Yet?</Text>
                 <TouchableOpacity >
-                    <Text style={styles.hyperLink}>SIGN UP</Text>
+                    <Text style={styles.hyperLink} onPress={() => navigation.navigate('Consultant_Register')}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
         </View>
