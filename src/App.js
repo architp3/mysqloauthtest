@@ -8,7 +8,7 @@ import Sales_Register from './src/components/Sales_Register';
 import Home from './src/components/Home';
 import Consultant_Register from './src/components/Consultant_Register';
 import Scheduled_Calls from './src/components/Scheduled_Calls';
-import CallAnalysis from './src/components/CallAnalysis';
+import CallAnalysis from './src/components/Call_Analysis';
 
 const Stack = createStackNavigator();
 
