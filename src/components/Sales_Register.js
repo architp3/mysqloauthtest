@@ -1,7 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet, TextInput, View, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, TextInput, View, TouchableOpacity, Text } from 'react-native';
 
-function Register() {
+function Sales_Register({navigation}) {
     return (
         <View style={styles.card}>
             <View style={styles.container}>
@@ -42,12 +42,12 @@ function Register() {
                     selectionColor="grey"
                 />
                 <TouchableOpacity style={styles.button} >
-                        <Text style={styles.buttonText}>SIGN UP</Text>
+                        <Text style={styles.buttonText} onPress={() => navigation.navigate('Login')}>SIGN UP</Text>
                 </TouchableOpacity> 
                 <View style={styles.hyperLinkText}>
                     <Text >Already have account?</Text>
                     <TouchableOpacity >
-                        <Text style={styles.hyperLink}>SIGN IN</Text>
+                        <Text style={styles.hyperLink} onPress={() => navigation.navigate('Login')}>SIGN IN</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent:'center',
         alignItems: 'center',
-        marginVertical:120,
+        marginVertical:40,
       },
       input: {
         paddingLeft:15,
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Register;
+export default Sales_Register;
