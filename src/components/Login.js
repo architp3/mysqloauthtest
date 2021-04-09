@@ -21,12 +21,12 @@ function Login({ navigation }) {
                 placeholderTextColor = "grey"
                 />
             <TouchableOpacity style={styles.button} >
-                <Text style={styles.buttonText}>SIGN IN</Text>
+                <Text style={styles.buttonText} onPress={() => navigation.navigate('Home')}>SIGN IN</Text>
             </TouchableOpacity>
             <View style={styles.hyperLinkText}>
                 <Text >Haven't Registered Yet?</Text>
                 <TouchableOpacity >
-                    <Text style={styles.hyperLink} onPress={() => navigation.navigate('Consultant_Register')}>SIGN UP</Text>
+                    <Text style={styles.hyperLink} onPress={() => navigation.navigate('Sales_Register')}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
         </View>
