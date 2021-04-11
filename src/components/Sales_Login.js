@@ -5,12 +5,15 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Button
+  Button,Image
 } from 'react-native';
 
-function Login({ navigation }) {
+function Sales_Login({ navigation }) {
     return(
         <View style={styles.container}>
+            <Image
+                source={require('../assets/logo.jpg')}
+            />
             <TextInput style={styles.input}
                 placeholder="Email Address"
                 placeholderTextColor = "grey"
@@ -20,6 +23,11 @@ function Login({ navigation }) {
                 placeholder="Password"
                 placeholderTextColor = "grey"
                 />
+            <View style={styles.forgotPasswordContainer}>
+                <TouchableOpacity >
+                    <Text style={styles.forgotPassword} onPress={() => navigation.navigate('Forgot_Password')}>Forgot Password?</Text>
+                </TouchableOpacity>
+            </View>
             <TouchableOpacity style={styles.button} >
                 <Text style={styles.buttonText} onPress={() => navigation.navigate('Home')}>SIGN IN</Text>
             </TouchableOpacity>
@@ -28,6 +36,12 @@ function Login({ navigation }) {
                 <TouchableOpacity >
                     <Text style={styles.hyperLink} onPress={() => navigation.navigate('Sales_Register')}>SIGN UP</Text>
                 </TouchableOpacity>
+            </View>
+            <View style={styles.infocisionLogoContainer}>
+                <Image
+                    style={styles.infocisionLogo}
+                    source={require('../assets/Infocision-Logo.png')}
+                />
             </View>
         </View>
     )
@@ -65,6 +79,15 @@ const styles = StyleSheet.create({
     color:'#ffffff',
     textAlign:'center'
   },
+  forgotPasswordContainer:{
+      fontSize:16,
+      marginVertical:12,
+      marginLeft: 182,
+  },
+  forgotPassword:{
+      color: '#048eadc2',
+      fontWeight: 'bold',
+  },
   hyperLinkText:{
       alignItems:'center',
       fontSize:16,
@@ -73,8 +96,16 @@ const styles = StyleSheet.create({
   hyperLink:{
       color: '#a40b0e',
       fontWeight: 'bold',
+  },
+  infocisionLogoContainer:{
+    marginTop:70,
+
+  },
+  infocisionLogo:{
+      width:130,
+      height:40
   }
 
 });
 
-export default Login;
+export default Sales_Login;
