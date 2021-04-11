@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, TextInput, View, TouchableOpacity, Text,Image } from 'react-native';
 
 function Sales_Register({navigation}) {
     return (
@@ -42,14 +42,20 @@ function Sales_Register({navigation}) {
                     selectionColor="grey"
                 />
                 <TouchableOpacity style={styles.button} >
-                        <Text style={styles.buttonText} onPress={() => navigation.navigate('Login')}>SIGN UP</Text>
+                        <Text style={styles.buttonText} onPress={() => navigation.navigate('Sales_Login')}>SIGN UP</Text>
                 </TouchableOpacity> 
                 <View style={styles.hyperLinkText}>
                     <Text >Already have account?</Text>
                     <TouchableOpacity >
-                        <Text style={styles.hyperLink} onPress={() => navigation.navigate('Login')}>SIGN IN</Text>
+                        <Text style={styles.hyperLink} onPress={() => navigation.navigate('Sales_Login')}>SIGN IN</Text>
                     </TouchableOpacity>
                 </View>
+            </View>
+            <View style={styles.infocisionLogoContainer}>
+                <Image
+                    style={styles.infocisionLogo}
+                    source={require('../assets/Infocision-Logo.png')}
+                />
             </View>
         </View>
     );
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent:'center',
         alignItems: 'center',
-        marginVertical:40,
+        marginVertical:5,
       },
       input: {
         paddingLeft:15,
@@ -94,6 +100,15 @@ const styles = StyleSheet.create({
     hyperLink:{
         color: '#a40b0e',
         fontWeight: 'bold',
+    },
+    infocisionLogoContainer:{
+      marginTop:-17,
+      alignItems:'center',
+  
+    },
+    infocisionLogo:{
+        width:130,
+        height:40
     }
 });
 
