@@ -1,19 +1,23 @@
 import React from 'react';
+
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
   TouchableOpacity,
-  Button,Image
+  Button,
+  Image
 } from 'react-native';
 
 function Sales_Login({ navigation }) {
+
+    
     return(
         <View style={styles.container}>
-            <Image
+            {/*<Image
                 source={require('../assets/logo.jpg')}
-            />
+            /> */}
             <TextInput style={styles.input}
                 placeholder="Email Address"
                 placeholderTextColor = "grey"
@@ -37,12 +41,18 @@ function Sales_Login({ navigation }) {
                     <Text style={styles.hyperLink} onPress={() => navigation.navigate('Sales_Register')}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
-            <View style={styles.infocisionLogoContainer}>
+            <View>
+                <TouchableOpacity>
+                    <Text onPress ={() => navigation.navigate('Google_Oauth')}>Sign in with Google</Text>
+                </TouchableOpacity>
+            </View>
+           
+            {/*<View style={styles.infocisionLogoContainer}>
                 <Image
                     style={styles.infocisionLogo}
                     source={require('../assets/Infocision-Logo.png')}
-                />
-            </View>
+    /> 
+    </View>*/}
         </View>
     )
 }

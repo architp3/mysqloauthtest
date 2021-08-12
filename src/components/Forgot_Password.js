@@ -24,9 +24,9 @@ function Forgot_Password({ navigation }) {
                 <Text style={styles.buttonText} onPress={() => navigation.navigate('Sales_Login')}>Reset My Password</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} >
-                <Text style={styles.buttonText}>Go Back</Text>
+                <Text style={styles.buttonText} onPress={() => navigation.navigate('Sales_Login')}>Go Back</Text>
             </TouchableOpacity>
-        </View>
+    </View>
     )
 }
 

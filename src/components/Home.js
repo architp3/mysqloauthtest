@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet,Text,View,TouchableOpacity } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+//import { createDrawerNavigator } from '@react-navigation/drawer';
 
 function Home({ navigation }) {
     return(
